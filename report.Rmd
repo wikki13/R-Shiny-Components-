@@ -1,0 +1,44 @@
+---
+title: "BioAge Report"
+output: html_document
+params:
+  name: "User"
+  age: 30
+  bioage: 30
+  gender: "Male"
+  smoking_status: "No"
+  bmi: 25
+  waist_circumference: 80
+  date: "`r Sys.Date()`"
+---
+
+# BioAge Report for `r params$name`
+
+## Personal Information
+
+- **Name**: `r params$name`
+- **Gender**: `r params$gender`
+- **Chronological Age**: `r params$age` years
+- **Smoking Status**: `r params$smoking_status`
+- **BMI**: `r params$bmi`
+- **Waist Circumference**: `r params$waist_circumference` cm
+
+## BioAge Calculation
+
+Your biological age is calculated based on several factors. 
+Below are the results:
+
+- **Chronological Age**: `r params$age` years
+- **Calculated BioAge**: `r params$bioage` years
+
+### Interpretation
+
+```{r}
+if (params$bioage <= params$age) {
+  result_message <- paste0("Congratulations, ", params$name, "! Your biological age is ", round(params$bioage, 2), 
+                           " years old, which is equal to or less than your chronological age. This indicates a healthy lifestyle.")
+} else {
+  result_message <- paste0("Hi, ", params$name, ", your biological age is ", round(params$bioage, 2), 
+                           " years old, which is higher than your chronological age. Consider adopting healthier lifestyle habits to improve your biological age.")
+}
+result_message
