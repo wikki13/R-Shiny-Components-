@@ -3,17 +3,6 @@ library(shiny)
 library(rmarkdown)
 library(knitr)
 
-# Simplified BioAge Model (Adjust based on your specific model)
-calculate_bioage <- function(age,
-                             gender,
-                             smoking_status,
-                             bmi,
-                             waist_circumference) {
-  # Placeholder: Replace with your actual model
-  bioage <- age + (bmi * 0.1) + (ifelse(smoking_status == "Yes", 5, 0))
-  return(bioage)
-}
-
 server <- function(input, output, session) {
   
   observeEvent(input$calculate, {
