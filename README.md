@@ -5,4 +5,4 @@ Various components to be developed using R Shiny, a web framework exclusively fo
 Authored by @wikki13. <br>
 This repo consits of additional components in developement exclusively in R for BioAge calculator based on agelessrx. <br>
 Software requirements: <br>
-R 4.4.2 ; Shiny 1.9.1 ; Shinythemes 1.2.0 ; Shinyjs 2.1.0 ; rmarkdown 2.29 ; knitr 1.49 
+R 4.4.2 ; Shiny 1.9.1 ; Shinythemes 1.2.0 ; Shinyjs 2.1.0 ; rmarkdown 2.29 ; knitr 1.49 ; tinytex 0.54.
