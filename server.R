@@ -5,6 +5,16 @@ library(knitr)
 
 server <- function(input, output, session) {
   
+  calculate_bioage <- function(age,
+                             gender,
+                             smoking_status,
+                             bmi,
+                             waist_circumference) {
+  # Placeholder: Replace with your actual model
+  bioage <- age + (bmi * 0.1) + (ifelse(smoking_status == "Yes", 5, 0))
+  return(bioage)
+}
+  
   observeEvent(input$calculate, {
     # Calculate bioage based on input data
     bioage <- calculate_bioage(
