@@ -2,6 +2,7 @@
 library(shiny)
 
 ui <- fluidPage(
+  tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
   titlePanel("BioAge Calculator"),
   sidebarLayout(
     sidebarPanel(

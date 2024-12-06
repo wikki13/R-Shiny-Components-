@@ -1,0 +1,12 @@
+.custom-popup-title {
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+.custom-popup-border {
+    text-align: center;
+    margin-top: 10px;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: red;
+}
