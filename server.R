@@ -41,7 +41,7 @@ show_bioage_modal <- function(name, age, bioage) {
   # Modal dialogue starting
   showModal(
     modalDialog(
-      title = tagList(h3(paste0(name, "'s BioAge"))),
+      title = div(tagList(h3(paste0(name, "'s BioAge"))),class="custom-popup-title"),
       div(
         style = "text-align: center; margin-top: 20px;",
         fluidRow(
@@ -63,7 +63,7 @@ show_bioage_modal <- function(name, age, bioage) {
         p(message, style = "font-size: 16px; font-weight: bold;")
       ),
       div(
-        style = "text-align: center; margin-top: 10px;",
+        class = "custom-popup-border",
         p("Complete report sent to your WhatsApp", style = "font-size: 14px;"),
         p("xxxxxxxx4321", style = "font-size: 14px; color: #888;")
       ),
